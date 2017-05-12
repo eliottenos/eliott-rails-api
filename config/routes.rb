@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   delete '/destroy-location/:id' => 'locations#destroy'
   # get '/get-location/:id' => 'locations#show'
   resources :users, only: [:index, :show, :update]
-  resources :locations, except: [:new, :edit, :update]
+  # resources :locations, except: [:new]
+  resources :locations, except: [:new, :edit]
 end
